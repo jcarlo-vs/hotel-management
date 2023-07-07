@@ -1,7 +1,7 @@
 import supabase from './supabase'
 
 export async function getCabins() {
-  let { data: cabins, error } = await supabase.from('cabins').select('*')
+  let { data, error } = await supabase.from('cabins').select('*')
 
   if (error) {
     console.error(error)
@@ -10,3 +10,4 @@ export async function getCabins() {
 
   return data
 }
+//
